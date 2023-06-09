@@ -37,7 +37,7 @@ bot.command("price", async (ctx) => {
   }
 });
 
-bot.startWebhook("/price", null, 8443);
+bot.startWebhook("/price", null, PORT);
 //Launching of Bot
 bot.launch();
 
