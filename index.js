@@ -1,9 +1,10 @@
 const { Telegraf } = require("telegraf");
+const express = require("express");
 const axios = require("axios");
 const { BOTID, APIKEY } = require("./config");
-
+const app = express();
 const bot = new Telegraf(BOTID); //Enter your bot key
-
+const PORT = process.env.PORT || 3000;
 const coinAPIKey = APIKEY; //enter your api key
 
 //Bot functioning starts here
@@ -37,3 +38,7 @@ bot.command("price", async (ctx) => {
 });
 //Launching of Bot
 bot.launch();
+
+app.listen(PORT, () => {
+  console.log("Running on", PORT);
+});
