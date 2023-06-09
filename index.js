@@ -36,6 +36,8 @@ bot.command("price", async (ctx) => {
     ctx.reply(errorMessage);
   }
 });
+
+bot.startWebhook("/price", null, 8443);
 //Launching of Bot
 bot.launch();
 
