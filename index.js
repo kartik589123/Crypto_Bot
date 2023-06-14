@@ -36,7 +36,10 @@ bot.command("price", async (ctx) => {
   }
 });
 
-bot.startWebhook("/price", null, PORT);
+bot.startWebhook(
+  "/price",
+  "https://api.telegram.org/bot6227388923:AAHWPm8TEwqpFgOQPbuO2pM1SGj9luIu8_I/setWebhook?url=https://t.me/crypto159bot"
+);
 //Launching of Bot
 bot.launch();
 
